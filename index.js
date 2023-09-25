@@ -2,9 +2,10 @@ const express = require("express")
 const {mongoose } = require("mongoose")
 const userRouter = require("./routes/userRouter")
 const employeeRouter = require("./routes/EmployeeRouter")
+  const cors = require("cors")
 require('dotenv').config()
   const app = express()
-
+app.use(cors())
    app.use(express.json())
 
  const connections = async()=>{
